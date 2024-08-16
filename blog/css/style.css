@@ -1,0 +1,247 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/* IMPORTED FONTS */
+
+@font-face {
+    font-family: "opensans";
+    src: url('../fonts/sans-serif/opensans-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "rozhaone";
+    src: url('../fonts/serif/rozhaone-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "lato";
+    src: url('../fonts/sans-serif/lato-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* TYPOGRAPHY */
+
+p {
+    font-family: lato, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: opensans, Helvetica, sans-serif; 
+}
+
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0.125rem;
+    transform: rotate(-4deg);
+}
+
+.highlight {
+    display: inline-block;
+    font-family: rozhaone, Georgia, serif;
+    border: 1px solid black;
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #e9e5e5;
+    background-color: #A64B37;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+.expand {
+    font-size: 0.4rem;
+    padding: 0.3rem;
+}
+
+/* GENERAL SETUP AND DEFAULTS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+
+/* LAYOUT */
+
+header {
+    padding: 0.5rem 0rem 1rem 0rem;
+    text-align: center;
+}
+
+nav {
+    margin-top: 3rem;
+}
+
+.main-section  {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1px solid #000000;
+    padding-left: 1rem;
+}
+
+aside p {
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0.75rem;
+}
+
+.subsection {
+    display: flex;
+}
+
+/* IMAGES AND FIGURES */
+
+img {
+    width: 100%;
+}
+
+figure {
+    margin: 0px;
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 0.75rem;
+}
+
+.subsection {
+    margin: 1rem 0rem;
+}
+
+.subsection figure {
+    margin: 0rem 0.25rem;
+    background-color: #D9D9D9;
+}
+
+.subsection figure figcaption {
+    padding: 0.5rem 0.5rem;
+}
+
+/* LINKS AND NAVIATION */
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-size: 2rem;
+    font-family:rozhaone, Georgia, serif;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+    color: #e9e5e5;
+    background-color: #A67951;
+    box-shadow: 5px 5px 4px -1px #888;
+}
+
+button a:active {
+    color:#fff;
+    background-color: #000;
+}
+
+button a:focus, a:hover {
+    color: #fff;
+    background-color: #33658A;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: lato, Arial, sans-serif;
+    color: #A67951;
+}
+
+nav {
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+}
+
+nav a:active {
+    color:#fff;
+    background-color: #000;
+}
+
+nav a:focus, a:hover {
+    color: #fff;
+    background-color: #33658A;
+}
+
+footer {
+    text-align: left;
+}
+
+.attribution {
+    text-align: right;
+}
